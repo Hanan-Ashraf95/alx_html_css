@@ -1,0 +1,110 @@
+/* --- CSS Reset and Font Imports --- */
+/* A simple reset to remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif; /* You will need to import this font */
+    color: #ffffff; /* Default text color will be white */
+}
+
+/* --- CSS Variables --- */
+/* Defining our color palette and other values as variables */
+:root {
+    --color-primary: #FF6565; /* The main red/orange color */
+    --color-dark-bg: #071629;
+    --font-size-large: 120px;
+    --font-size-medium: 32px;
+    --font-size-small: 16px;
+    --max-width: 1000px; /* The max width for our content */
+}
+
+/* --- Reusable Components --- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto; /* This centers the container */
+    padding: 0 20px; /* Adds space on the sides on smaller screens */
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    opacity: 0.9; /* As required by the instructions */
+}
+
+/* --- Header & Hero Section Styles --- */
+.header-hero {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center top;
+    padding-bottom: 100px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.main-nav li {
+    margin-left: 40px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+    color: var(--color-primary); /* As required by the instructions */
+}
+
+/* --- Hero Content Styles --- */
+.hero-content {
+    text-align: center;
+    margin-top: 250px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-medium); /* Starting with a reasonable size */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content .hero-subtitle {
+    font-weight: bold;
+    font-size: var(--font-size-small);
+    margin-bottom: 40px;
+}
+
+.hero-content .hero-description {
+    max-width: 600px;
+    margin: 50px auto 0 auto;
+    line-height: 1.6;
+}
