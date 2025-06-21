@@ -1,6 +1,6 @@
 /*
-   This section is for the main page layout using Flexbox,
-   as per the "Positioning" task.
+    This section is for the main page layout using Flexbox,
+    as per the "Positioning" task.
 */
 
 /* 1. Make the <body> a flex container with a column direction */
@@ -26,3 +26,83 @@ aside {
     flex: 1;             /* This makes the aside take up 1/3 of the space */
     overflow-y: auto;    /* This also gets a scrollbar if needed */
 }
+
+/*
+========================================
+CUSTOM STYLES (Darker Gold and Purple Theme)
+========================================
+*/
+
+/* --- General Body and Font Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-color: #F4F2F7; /* Keeping a light background for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header and Footer Styling --- */
+header, footer {
+    background-color: #240046; /* A very deep, rich purple */
+    color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+/* Make sure the logo and links in the header are visible and styled */
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    padding: 0 15px;
+}
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* The logo should be larger and have a different color */
+header .logo {
+    font-size: 28px;
+    color: #FFD700; /* Bright Gold */
+}
+
+
+/* --- General Link Styling --- */
+a {
+    color: #5a189a; /* A strong, dark purple for links */
+}
+
+a:hover {
+    color: #FFD700; /* Gold color on hover for a nice accent */
+}
+
+
+/* --- Headings Styling --- */
+h1, h2, h3, h4, h5, h6 {
+    color: #3c096c; /* A dark, but not black, purple for headings */
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+
+/* --- Main Content Area Styling --- */
+article {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+aside {
+    padding-left: 20px;
+}
+
+/* Style the placeholder in the aside */
+aside p {
+    background-color: #E6E0F0; /* A slightly richer purple-grey */

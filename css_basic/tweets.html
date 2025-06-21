@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Hanan's First Cool Webpage!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanan's Tweets!</title>
     <link href="base.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="works_on_smartphone"> <header>
+<body class="works_on_smartphone">
+    <header>
+        <!-- This is your consistent navigation menu -->
         <ul>
+            <li class="logo">&#128640;</li> <!-- The Rocket Logo -->
             <li><a href="index.html">Home</a></li>
             <li><a href="tweets.html">Tweets</a></li>
         </ul>
@@ -15,56 +19,14 @@
 
     <main>
         <article>
-            <h1>Welcome to My Awesome Page!</h1>
-            
-            <p>This is my very first cool webpage, and I'm so excited to be building it step-by-step.</p>
-            
-            <h2>About This Page</h2>
-            <p>Here, you'll find a mix of interesting facts, my thoughts, and perhaps some pictures. I'm learning HTML, and this page is a great way to practice adding different elements.</p>
-            <p>I'm focusing on creating a well-structured document using proper headings and paragraphs, just like we learned!</p>
-            
-            <h3>A Fun Image for You!</h3>
-            <p>Below is an image. Click on it to go to a cool place!</p>
-            
-            <a href="https://x.com/MustafaHosny/status/1931788023471182154" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png" alt="X tweet logo linking to Mustafa Hosny's tweet">
-            </a>
+            <h1>My Latest Tweets</h1>
+            <p>Check out some of my recent thoughts and updates below!</p>
 
-            <p>Thank you for visiting my page! I hope you enjoyed it.</p>
-            <p>Stay tuned for more updates as I continue my front-end journey!</p>
-            <h2>Meet Some Awesome Learners!</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Country</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>25</td>
-                        <td>USA</td>
-                    </tr>
-                    <tr>
-                        <td>Emily</td>
-                        <td>28</td>
-                        <td>Canada</td>
-                    </tr>
-                    <tr>
-                        <td>Michael</td>
-                        <td>32</td>
-                        <td>Australia</td>
-                    </tr>
-                    <tr>
-                        <td>Sophia</td>
-                        <td>21</td>
-                        <td>UK</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- This is the embedded tweet from Mustafa Hosny -->
+            <blockquote class="twitter-tweet">
+                <p lang="ar" dir="rtl">إلهي كما سلّم سيدنا إبراهيم أمره لك.. ارزقنا التسليم لك في كل أمر.. والفرح بفضلك علينا يا رب</p>&mdash; Mustafa Hosny (@MustafaHosny) <a href="https://twitter.com/MustafaHosny/status/1931788023471182154?ref_src=twsrc%5Etfw">June 8, 2025</a>
+            </blockquote> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </article>
 
         <aside>
@@ -73,6 +35,7 @@
     </main>
 
     <footer>
+        <!-- Make sure this paragraph is on a single line in your code in VS Code -->
         <p>Made by Hanan - <a href="https://github.com/Hanan-Ashraf95" target="_blank">here</a></p>
     </footer>
 </body>
