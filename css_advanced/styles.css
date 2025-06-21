@@ -301,3 +301,33 @@ header nav a {
     color: #555; /* A dark grey for the text */
     line-height: 1.6; /* A little extra line spacing for readability */
 }
+/* =================================
+   FOOTER STYLES
+   ================================= */
+
+footer {
+    background-color: #071629; /* The same dark color as the membership section */
+    padding: 60px 0 30px 0; /* Top, Right/Left, Bottom */
+}
+
+.footer-container {
+    max-width: 1000px; /* Aligns the footer with the rest of the content */
+    margin: 0 auto; /* Centers the container */
+}
+
+.footer-row {
+    display: flex; /* Puts the logo and social icons side-by-side */
+    justify-content: space-between; /* Pushes them to opposite ends */
+    align-items: center; /* Aligns them vertically in the middle */
+    margin-bottom: 40px; /* Space between this row and the copyright text */
+}
+
+.social-icons a {
+    margin-left: 20px; /* Adds space between each social media icon */
+}
+
+.copyright-text {
+    text-align: center;
+    color: #888; /* A light grey for the copyright text */
+    font-size: 12px;
+}
