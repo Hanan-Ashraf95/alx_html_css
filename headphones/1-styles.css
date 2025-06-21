@@ -1,0 +1,161 @@
+/* --- CSS Reset and Font Imports --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+}
+
+/* --- CSS Variables --- */
+:root {
+    --color-primary: #FF6565;
+    --color-dark-bg: #071629;
+    --color-text-dark: #071629;
+    --max-width: 1000px;
+}
+
+/* --- Reusable Components --- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    opacity: 0.9;
+}
+
+/* Generic class for section headers */
+.section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 80px auto;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.section-header p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --- Header & Hero Section Styles --- */
+.header-hero {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center top;
+    padding-bottom: 100px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.main-nav li {
+    margin-left: 40px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+    color: var(--color-primary);
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: 250px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content .hero-subtitle {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.hero-content .hero-description {
+    max-width: 600px;
+    margin: 50px auto 0 auto;
+    line-height: 1.6;
+}
+
+
+/* --- "What we do..." Section Styles --- */
+.what-we-do {
+    padding: 100px 0;
+    color: var(--color-text-dark); /* Text in this section should be dark */
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-item {
+    text-align: center;
+    flex: 1; /* Each item takes up equal space */
+    max-width: 210px;
+}
+
+/* Styling the custom icons */
+.feature-item [class^="holberton_school-icon-"] {
+    font-size: 80px; /* Make the icons large */
+    color: var(--color-primary); /* Use the primary red color */
+    display: block;
+    margin-bottom: 30px;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    line-height: 1.6;
+}
