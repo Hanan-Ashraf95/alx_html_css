@@ -1,0 +1,28 @@
+/*
+   This section is for the main page layout using Flexbox,
+   as per the "Positioning" task.
+*/
+
+/* 1. Make the <body> a flex container with a column direction */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Make <main> a flex container with a row direction and have it grow automatically */
+main {
+    display: flex;
+    flex-direction: row; /* This arranges article and aside side-by-side */
+    flex: auto;          /* This makes the main area flexible and take up available space */
+}
+
+/* 3. Define the proportions for <article> and <aside> */
+article {
+    flex: 2;             /* This makes the article take up 2/3 of the space */
+    overflow-y: auto;    /* This adds a scrollbar if the content is too long */
+}
+
+aside {
+    flex: 1;             /* This makes the aside take up 1/3 of the space */
+    overflow-y: auto;    /* This also gets a scrollbar if needed */
+}
