@@ -7,11 +7,15 @@ header {
     justify-content: space-between; /* This pushes them to opposite ends */
     align-items: center; /* This lines them up vertically in the middle */
     padding: 30px 100px; /* Adds space on the top/bottom and left/right */
+    position: absolute; /* Makes the header float */
+    width: 100%; /* Makes the header span the full width */
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
 header nav ul {
     display: flex; /* Puts the navigation links side-by-side */
     list-style-type: none; /* Removes the little black dots (bullets) */
+    padding: 0; /* Removes default padding */
 }
 
 header nav li {
@@ -23,28 +27,31 @@ header nav a {
     text-decoration: none; /* Removes the underline */
     font-weight: bold; /* Makes the text bold */
 }
+
 /* =================================
    BANNER STYLES
    ================================= */
 
 .banner-section {
     /* The big background image */
-    background-image: url('images/pic-1.jpg'); /* IMPORTANT: Make sure 'pic-1.jpg' matches the name of your background image file! */
+    background-image: url('images/object.png'); /* The correct image name */
     background-size: cover; /* Makes the image cover the whole section */
     background-position: center; /* Puts the image in the center */
     
-    padding: 150px 0; /* Lots of space on the top and bottom */
+    padding: 200px 0; /* More space on the top and bottom */
 
     /* Centering all the content inside */
     display: flex;
     flex-direction: column; /* Stacks the content vertically */
     align-items: center; /* Centers everything horizontally */
+    text-align: center; /* Ensures all text inside is centered */
     color: #FFFFFF; /* Makes all the text inside white */
 }
 
 .banner-section h1 {
     font-size: 120px; /* Makes "Get schooled" very big */
     font-weight: bold;
+    margin: 0;
 }
 
 .banner-section p {
@@ -60,35 +67,55 @@ header nav a {
     padding: 15px 30px; /* Makes the button bigger */
     border-radius: 25px; /* Makes the corners perfectly rounded */
     font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 80px; /* Lots of space below the button */
+    font-size: 14px; /* Fixed this line */
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-bottom: 50px;
 }
 
-.banner-section h2 {
-    color: #C271FF; /* The same purple color */
+/* =================================
+   QUOTE STYLES
+   ================================= */
+
+.quote-section {
+    background-color: #C271FF; /* The light purple from the design */
+    color: #FFFFFF; /* Makes the text inside white */
+    padding: 80px 0; /* Adds space on the top and bottom */
 }
 
-.pros-container {
-    display: flex; /* Puts the 4 'pro' cards side-by-side */
-    justify-content: space-between; /* Spaces them out evenly */
-    width: 1000px; /* Gives the container a fixed width */
-    margin-top: 50px; /* Space above the pro cards */
+/* This targets the main container div inside the quote section */
+.quote-section > div {
+    display: flex; /* This puts the image and text block side-by-side! */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Aligns the content vertically in the middle */
+    max-width: 800px; /* Stops the content from stretching too wide */
+    margin: 0 auto; /* A trick to center the whole container on the page */
+    gap: 50px; /* Creates a nice gap between the image and the text */
 }
 
-.pro-card {
-    text-align: center; /* Centers the text inside each card */
+/* This targets the image of the person */
+.quote-section img {
+    width: 160px; /* Sets a specific size for the image */
+    height: 160px;
+    border-radius: 50%; /* The magic trick to make it a perfect circle */
+    object-fit: cover; /* Ensures the image fills the circle neatly */
 }
 
-.pro-card img {
-    width: 150px; /* Sets the width of the profile picture */
-    height: 150px; /* Sets the height */
-    border-radius: 50%; /* This is the trick to make the picture a perfect circle! */
+/* This targets the quote text itself */
+.quote-section blockquote {
+    font-size: 22px;
+    font-weight: lighter; /* Makes the quote text a bit thinner */
+    margin: 0; /* Removes any default spacing */
 }
 
-.pro-card h3 {
-    margin-top: 15px; /* Space above the person's name */
+/* This targets the "Person Name" paragraph */
+.quote-section p b {
+    display: block; /* Gives the name its own line */
+    margin-top: 20px; /* Adds space above the name */
 }
 
-.pro-card p {
-    font-style: italic; /* Makes the description text italic */
+/* This targets the "weather presenter" paragraph */
+.quote-section p i {
+    display: block; /* Gives the title its own line */
+    margin-top: 5px; /* Adds a little space above the title */
 }
