@@ -60,7 +60,7 @@ header nav a {
     margin-bottom: 40px; /* Space below the "SMILES, GRIN, LAUGH" text */
 }
 
-.banner-section button {
+.button-primary {
     background-color: #C271FF; /* The purple color from the design */
     color: #FFFFFF; /* White text on the button */
     border: none; /* Removes the default ugly border */
@@ -208,4 +208,52 @@ header nav a {
     font-size: 14px;
     font-weight: bold;
     margin: 0;
+}
+/* =================================
+   MEMBERSHIP STYLES
+   ================================= */
+
+.membership-section {
+    background-color: #071629; /* The very dark blue/black background */
+    color: #FFFFFF; /* Makes all text inside white */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.membership-section h2 {
+    margin-bottom: 50px;
+}
+
+/* This styles the word "Free" in the heading */
+.highlight {
+    color: #C271FF; /* Our theme purple color */
+}
+
+.membership-container {
+    display: flex; /* Puts the 4 membership cards side-by-side */
+    justify-content: center;
+    gap: 40px; /* Space between the cards */
+    max-width: 1000px;
+    margin: 0 auto 50px auto; /* Top, Right/Left, Bottom */
+}
+
+.membership-card {
+    flex-basis: 200px; /* Gives each card a base width */
+}
+
+.membership-card img {
+    width: 45px; /* Control the size of the smile icon */
+    height: 35px;
+    margin-bottom: 15px;
+}
+
+.membership-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.membership-card p {
+    font-size: 14px;
+    line-height: 1.5;
 }
