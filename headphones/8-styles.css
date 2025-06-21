@@ -1,0 +1,77 @@
+/* --- All your previous CSS rules go here --- */
+/* (Reset, Variables, Reusable Components, Header, Hero, etc.) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Source Sans Pro', sans-serif; color: #ffffff; background-color: #ffffff; }
+:root { --color-primary: #FF6565; --color-dark-bg: #071629; --color-text-dark: #071629; --max-width: 1000px; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+.btn-primary { background-color: var(--color-primary); color: #ffffff; border: none; padding: 15px 30px; border-radius: 25px; font-weight: bold; font-size: 14px; cursor: pointer; transition: opacity 0.3s ease; }
+.btn-primary:hover, .btn-primary:active { opacity: 0.9; }
+/* ...and so on for all your other styles... */
+
+/* --- Header and Nav Styles --- */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    position: relative; /* Needed for menu positioning */
+}
+
+/* Hide the hamburger menu on desktop */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* --- Responsive Styles for Mobile --- */
+@media screen and (max-width: 480px) {
+    /* Hide the desktop navigation */
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-dark-bg); /* Give it a background */
+    }
+
+    /* When the menu is open, show the nav */
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack the links vertically */
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .main-nav li {
+        margin: 15px 0; /* Add space between the links */
+        margin-left: 0;
+    }
+
+    /* Show the hamburger menu icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Animation for the hamburger icon when active */
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}

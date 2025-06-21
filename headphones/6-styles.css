@@ -1,0 +1,165 @@
+/* --- CSS Reset and Font Imports --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    background-color: #ffffff; 
+}
+
+/* --- CSS Variables --- */
+:root {
+    --color-primary: #FF6565;
+    --color-dark-bg: #071629;
+    --color-text-dark: #071629;
+    --max-width: 1000px;
+}
+
+/* --- Reusable Components --- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    opacity: 0.9;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 50px auto;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.section-header p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --- Header & Hero Section Styles --- */
+.header-hero { background-image: url('images/headphones_hero_1.jpg'); background-size: cover; background-position: center top; padding-bottom: 100px; }
+.header-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 30px; }
+.main-nav ul { display: flex; list-style-type: none; }
+.main-nav li { margin-left: 40px; }
+.main-nav a { color: #ffffff; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+.main-nav a:hover, .main-nav a:active { color: var(--color-primary); }
+.hero-content { text-align: center; margin-top: 250px; max-width: 650px; margin-left: auto; margin-right: auto; }
+.hero-content h1 { font-size: 32px; font-weight: bold; margin-bottom: 10px; }
+.hero-content .hero-subtitle { font-weight: bold; font-size: 16px; margin-bottom: 40px; }
+.hero-content .hero-description { max-width: 600px; margin: 50px auto 0 auto; line-height: 1.6; }
+
+
+/* --- "What we do..." Section Styles --- */
+.what-we-do { padding: 100px 0; color: var(--color-text-dark); }
+.features-grid { display: flex; justify-content: space-between; gap: 20px; }
+.feature-item { 
+    text-align: center; 
+    flex: 1; 
+    max-width: 210px; 
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+/* Animation for "What we do" items */
+.feature-item:hover {
+    transform: translateY(-10px); /* Lifts the item up slightly on hover */
+}
+
+.feature-item [class^="holberton_school-icon-"] { font-size: 80px; color: var(--color-primary); display: block; margin-bottom: 30px; }
+.feature-item h3 { font-size: 18px; font-weight: bold; margin-bottom: 15px; }
+.feature-item p { font-size: 14px; line-height: 1.6; }
+
+
+/* --- "Our results..." Section Styles --- */
+.results-section { 
+    background-color: var(--color-dark-bg); /* Replaced background image with dark bg color */
+    padding: 100px 0; 
+}
+.results-grid { display: flex; justify-content: center; gap: 40px; margin-top: 100px; }
+.result-item { 
+    position: relative; 
+    width: 190px; 
+    height: 190px;
+    transition: transform 0.4s ease; /* Add transition for smooth animation */
+}
+
+/* Animation for "Our results" items */
+.result-item:hover {
+    transform: scale(1.1); /* Makes the pentagon slightly larger on hover */
+}
+
+.pentagon-shape { width: 100%; height: 100%; background-color: var(--color-primary); clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+.pentagon-shape h3 { font-size: 46px; font-weight: bold; margin: 0; }
+.pentagon-shape p { font-size: 14px; margin-top: 5px; }
+
+
+/* --- Contact Us Section Styles --- */
+.contact-section { padding: 100px 0; }
+.contact-section .section-header h2 { color: var(--color-text-dark); }
+.contact-form { max-width: 350px; margin: 0 auto; }
+.contact-form input, .contact-form textarea { width: 100%; border: none; background: none; border-bottom: 1px solid #979797; padding: 15px 0; margin-bottom: 40px; font-size: 16px; font-family: inherit; transition: border-bottom-color 0.3s ease; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-bottom-color: var(--color-primary); }
+.contact-form .btn-primary { margin: 0 auto; display: block; }
+
+/* --- Footer Styles --- */
+footer {
+    background-color: var(--color-dark-bg);
+    padding: 80px 0 40px 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.social-icons {
+    display: flex;
+    list-style-type: none;
+}
+
+.social-icons li {
+    margin-left: 20px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px; /* Controls the size of the icon font */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:active {
+    color: var(--color-primary);
+}
+
+.copyright-text {
+    text-align: center;
+    color: #888; /* A light grey for the copyright */
+    font-size: 12px;
+}
