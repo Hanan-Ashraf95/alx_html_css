@@ -76,7 +76,18 @@ body {
 /* --- "What we do..." Section Styles --- */
 .what-we-do { padding: 100px 0; color: var(--color-text-dark); }
 .features-grid { display: flex; justify-content: space-between; gap: 20px; }
-.feature-item { text-align: center; flex: 1; max-width: 210px; }
+.feature-item { 
+    text-align: center; 
+    flex: 1; 
+    max-width: 210px; 
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+/* Animation for "What we do" items */
+.feature-item:hover {
+    transform: translateY(-10px); /* Lifts the item up slightly on hover */
+}
+
 .feature-item [class^="holberton_school-icon-"] { font-size: 80px; color: var(--color-primary); display: block; margin-bottom: 30px; }
 .feature-item h3 { font-size: 18px; font-weight: bold; margin-bottom: 15px; }
 .feature-item p { font-size: 14px; line-height: 1.6; }
@@ -84,13 +95,22 @@ body {
 
 /* --- "Our results..." Section Styles --- */
 .results-section { 
-    background-color: var(--color-dark-bg); /* Replaced the background image with our dark bg color variable */
-    background-size: cover; 
-    background-position: center center; 
+    background-color: var(--color-dark-bg);
     padding: 100px 0; 
 }
 .results-grid { display: flex; justify-content: center; gap: 40px; margin-top: 100px; }
-.result-item { position: relative; width: 190px; height: 190px; }
+.result-item { 
+    position: relative; 
+    width: 190px; 
+    height: 190px;
+    transition: transform 0.4s ease; /* Add transition for smooth animation */
+}
+
+/* Animation for "Our results" items */
+.result-item:hover {
+    transform: scale(1.1); /* Makes the pentagon slightly larger on hover */
+}
+
 .pentagon-shape { width: 100%; height: 100%; background-color: var(--color-primary); clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
 .pentagon-shape h3 { font-size: 46px; font-weight: bold; margin: 0; }
 .pentagon-shape p { font-size: 14px; margin-top: 5px; }
