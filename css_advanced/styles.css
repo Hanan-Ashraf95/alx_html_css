@@ -119,3 +119,93 @@ header nav a {
     display: block; /* Gives the title its own line */
     margin-top: 5px; /* Adds a little space above the title */
 }
+/* =================================
+   VIDEOS STYLES
+   ================================= */
+
+.videos-section {
+    padding: 80px 0; /* Space on the top and bottom */
+    text-align: center; /* Center the main heading */
+}
+
+.videos-section h2 {
+    margin-bottom: 50px; /* Space below the "Most popular tutorials" heading */
+}
+
+.videos-container {
+    display: flex; /* This puts the 4 video cards side-by-side */
+    justify-content: center; /* Centers the group of cards */
+    gap: 25px; /* Creates a small gap between each card */
+    max-width: 1000px; /* Stops the cards from spreading out too far */
+    margin: 0 auto; /* Centers the whole container */
+}
+
+.video-card {
+    text-align: left; /* Aligns the text inside each card to the left */
+    width: 240px; /* Gives each card a specific width */
+}
+
+/* This is the container for the thumbnail we just added */
+.thumbnail-container {
+    position: relative; /* This is needed to position the play button on top! */
+    margin-bottom: 10px;
+}
+
+/* This is the magic to add the play button! */
+.thumbnail-container::before {
+    content: url('images/play.png'); /* Sets the play button image */
+    position: absolute; /* Lifts the play button up to be placed on top */
+    top: 50%; /* Puts it halfway down */
+    left: 50%; /* Puts it halfway across */
+    transform: translate(-50%, -50%); /* This perfectly centers the button */
+    opacity: 0.8; /* Makes it slightly transparent */
+}
+
+.video-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.video-card p {
+    font-size: 14px;
+    color: #888; /* A lighter grey for the description */
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.author {
+    display: flex; /* Puts the author image and name side-by-side */
+    align-items: center; /* Lines them up vertically */
+    margin-bottom: 15px;
+}
+
+.author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Makes the author image a circle */
+    margin-right: 10px; /* Space between the image and the name */
+}
+
+.author h4 {
+    font-size: 14px;
+    color: #C271FF; /* Purple color for the author's name */
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between; /* Pushes stars and duration to opposite ends */
+    align-items: center;
+}
+
+.rating img {
+    width: 15px; /* Makes the stars smaller */
+}
+
+.rating p {
+    color: #C271FF; /* Purple color for the duration text */
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
