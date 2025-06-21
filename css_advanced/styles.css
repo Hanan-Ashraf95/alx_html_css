@@ -3,29 +3,29 @@
    ================================= */
 
 header {
-    display: flex; /* This puts the logo and links side-by-side */
-    justify-content: space-between; /* This pushes them to opposite ends */
-    align-items: center; /* This lines them up vertically in the middle */
-    padding: 30px 100px; /* Adds space on the top/bottom and left/right */
-    position: absolute; /* Makes the header float */
-    width: 100%; /* Makes the header span the full width */
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    position: absolute; /* Makes the header float on top */
+    width: 100%;
+    box-sizing: border-box; /* Important for width calculation */
 }
 
 header nav ul {
-    display: flex; /* Puts the navigation links side-by-side */
-    list-style-type: none; /* Removes the little black dots (bullets) */
-    padding: 0; /* Removes default padding */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
 }
 
 header nav li {
-    margin-left: 40px; /* Adds some space to the left of each link */
+    margin-left: 40px;
 }
 
 header nav a {
-    color: #FFFFFF; /* Makes the links white */
-    text-decoration: none; /* Removes the underline */
-    font-weight: bold; /* Makes the text bold */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* =================================
@@ -33,23 +33,23 @@ header nav a {
    ================================= */
 
 .banner-section {
-    /* The big background image */
-    background-image: url('images/object.png'); /* The correct image name */
-    background-size: cover; /* Makes the image cover the whole section */
-    background-position: center; /* Puts the image in the center */
-    
-    padding: 200px 0; /* More space on the top and bottom */
-
-    /* Centering all the content inside */
+    background-image: url('images/object.png');
+    background-size: cover;
+    background-position: center center;
+    padding: 150px 0;
     display: flex;
-    flex-direction: column; /* Stacks the content vertically */
-    align-items: center; /* Centers everything horizontally */
-    text-align: center; /* Ensures all text inside is centered */
-    color: #FFFFFF; /* Makes all the text inside white */
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.banner-content {
+    margin-bottom: 100px;
 }
 
 .banner-section h1 {
-    font-size: 120px; /* Makes "Get schooled" very big */
+    font-size: 120px;
     font-weight: bold;
     margin: 0;
 }
@@ -57,20 +57,57 @@ header nav a {
 .banner-section p {
     font-weight: bold;
     font-size: 16px;
-    margin-bottom: 40px; /* Space below the "SMILES, GRIN, LAUGH" text */
 }
 
 .button-primary {
-    background-color: #C271FF; /* The purple color from the design */
-    color: #FFFFFF; /* White text on the button */
-    border: none; /* Removes the default ugly border */
-    padding: 15px 30px; /* Makes the button bigger */
-    border-radius: 25px; /* Makes the corners perfectly rounded */
+    background-color: #C271FF;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
     font-weight: bold;
-    font-size: 14px; /* Fixed this line */
+    font-size: 14px;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+}
+
+.banner-content button {
+    margin-top: 20px;
+}
+
+.pros-section h2 {
     margin-bottom: 50px;
+}
+
+.pros-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.pro-card {
+    text-align: center;
+    flex: 1;
+}
+
+.pro-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pro-card h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.pro-card p {
+    font-style: italic;
+    font-size: 14px;
+    margin: 0;
 }
 
 /* =================================
@@ -78,87 +115,81 @@ header nav a {
    ================================= */
 
 .quote-section {
-    background-color: #C271FF; /* The light purple from the design */
-    color: #FFFFFF; /* Makes the text inside white */
-    padding: 80px 0; /* Adds space on the top and bottom */
+    background-color: #C271FF;
+    color: #FFFFFF;
+    padding: 80px 0;
 }
 
-/* This targets the main container div inside the quote section */
-.quote-section > div {
-    display: flex; /* This puts the image and text block side-by-side! */
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Aligns the content vertically in the middle */
-    max-width: 800px; /* Stops the content from stretching too wide */
-    margin: 0 auto; /* A trick to center the whole container on the page */
-    gap: 50px; /* Creates a nice gap between the image and the text */
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 50px;
 }
 
-/* This targets the image of the person */
-.quote-section img {
-    width: 160px; /* Sets a specific size for the image */
+.quote-container img {
+    width: 160px;
     height: 160px;
-    border-radius: 50%; /* The magic trick to make it a perfect circle */
-    object-fit: cover; /* Ensures the image fills the circle neatly */
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* This targets the quote text itself */
-.quote-section blockquote {
+.quote-text blockquote {
     font-size: 22px;
-    font-weight: lighter; /* Makes the quote text a bit thinner */
-    margin: 0; /* Removes any default spacing */
+    font-weight: lighter;
+    margin: 0;
 }
 
-/* This targets the "Person Name" paragraph */
-.quote-section p b {
-    display: block; /* Gives the name its own line */
-    margin-top: 20px; /* Adds space above the name */
+.quote-text p b {
+    display: block;
+    margin-top: 20px;
 }
 
-/* This targets the "weather presenter" paragraph */
-.quote-section p i {
-    display: block; /* Gives the title its own line */
-    margin-top: 5px; /* Adds a little space above the title */
+.quote-text p i {
+    display: block;
+    margin-top: 5px;
 }
+
 /* =================================
    VIDEOS STYLES
    ================================= */
 
 .videos-section {
-    padding: 80px 0; /* Space on the top and bottom */
-    text-align: center; /* Center the main heading */
+    padding: 80px 0;
+    text-align: center;
 }
 
 .videos-section h2 {
-    margin-bottom: 50px; /* Space below the "Most popular tutorials" heading */
+    margin-bottom: 50px;
 }
 
 .videos-container {
-    display: flex; /* This puts the 4 video cards side-by-side */
-    justify-content: center; /* Centers the group of cards */
-    gap: 25px; /* Creates a small gap between each card */
-    max-width: 1000px; /* Stops the cards from spreading out too far */
-    margin: 0 auto; /* Centers the whole container */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .video-card {
-    text-align: left; /* Aligns the text inside each card to the left */
-    width: 240px; /* Gives each card a specific width */
+    text-align: left;
+    width: 240px;
 }
 
-/* This is the container for the thumbnail we just added */
 .thumbnail-container {
-    position: relative; /* This is needed to position the play button on top! */
+    position: relative;
     margin-bottom: 10px;
 }
 
-/* This is the magic to add the play button! */
 .thumbnail-container::before {
-    content: url('images/play.png'); /* Sets the play button image */
-    position: absolute; /* Lifts the play button up to be placed on top */
-    top: 50%; /* Puts it halfway down */
-    left: 50%; /* Puts it halfway across */
-    transform: translate(-50%, -50%); /* This perfectly centers the button */
-    opacity: 0.8; /* Makes it slightly transparent */
+    content: url('images/play.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
 }
 
 .video-card h3 {
@@ -169,53 +200,59 @@ header nav a {
 
 .video-card p {
     font-size: 14px;
-    color: #888; /* A lighter grey for the description */
+    color: #888;
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
 .author {
-    display: flex; /* Puts the author image and name side-by-side */
-    align-items: center; /* Lines them up vertically */
+    display: flex;
+    align-items: center;
     margin-bottom: 15px;
 }
 
 .author img {
     width: 30px;
     height: 30px;
-    border-radius: 50%; /* Makes the author image a circle */
-    margin-right: 10px; /* Space between the image and the name */
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .author h4 {
     font-size: 14px;
-    color: #C271FF; /* Purple color for the author's name */
+    color: #C271FF;
     margin: 0;
 }
 
 .rating {
     display: flex;
-    justify-content: space-between; /* Pushes stars and duration to opposite ends */
+    justify-content: space-between;
     align-items: center;
 }
 
-.rating img {
-    width: 15px; /* Makes the stars smaller */
+.rating .stars {
+    display: flex;
+    gap: 5px;
 }
 
-.rating p {
-    color: #C271FF; /* Purple color for the duration text */
+.rating .stars img {
+    width: 15px;
+}
+
+.rating .duration {
+    color: #C271FF;
     font-size: 14px;
     font-weight: bold;
     margin: 0;
 }
+
 /* =================================
    MEMBERSHIP STYLES
    ================================= */
 
 .membership-section {
-    background-color: #071629; /* The very dark blue/black background */
-    color: #FFFFFF; /* Makes all text inside white */
+    background-color: #071629;
+    color: #FFFFFF;
     padding: 80px 0;
     text-align: center;
 }
@@ -224,25 +261,24 @@ header nav a {
     margin-bottom: 50px;
 }
 
-/* This styles the word "Free" in the heading */
 .highlight {
-    color: #C271FF; /* Our theme purple color */
+    color: #C271FF;
 }
 
 .membership-container {
-    display: flex; /* Puts the 4 membership cards side-by-side */
+    display: flex;
     justify-content: center;
-    gap: 40px; /* Space between the cards */
+    gap: 40px;
     max-width: 1000px;
-    margin: 0 auto 50px auto; /* Top, Right/Left, Bottom */
+    margin: 0 auto 50px auto;
 }
 
 .membership-card {
-    flex-basis: 200px; /* Gives each card a base width */
+    flex-basis: 200px;
 }
 
 .membership-card img {
-    width: 45px; /* Control the size of the smile icon */
+    width: 45px;
     height: 35px;
     margin-bottom: 15px;
 }
@@ -257,37 +293,37 @@ header nav a {
     font-size: 14px;
     line-height: 1.5;
 }
+
 /* =================================
    F.A.Q. STYLES
    ================================= */
 
 .faq-section {
-    padding: 80px 0; /* Space on the top and bottom */
-    text-align: center; /* This will center the main "F.A.Q." heading */
+    padding: 80px 0;
+    text-align: center;
 }
 
 .faq-section h2 {
-    margin-bottom: 70px; /* Lots of space below the main heading */
+    margin-bottom: 70px;
 }
 
 .faq-container {
-    max-width: 900px; /* Stops the grid from getting too wide */
-    margin: 0 auto; /* Centers the whole container */
-    text-align: left; /* Resets the text alignment for the items inside */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .faq-row {
-    display: flex; /* This makes the two question cards sit next to each other! */
-    gap: 70px; /* The space between the two cards in a row */
+    display: flex;
+    gap: 70px;
 }
 
-/* Add space between the two rows */
 .faq-row:first-child {
     margin-bottom: 50px;
 }
 
 .faq-item {
-    flex: 1; /* This makes both items in a row take up equal space */
+    flex: 1;
 }
 
 .faq-item h3 {
@@ -298,36 +334,37 @@ header nav a {
 
 .faq-item p {
     font-size: 14px;
-    color: #555; /* A dark grey for the text */
-    line-height: 1.6; /* A little extra line spacing for readability */
+    color: #555;
+    line-height: 1.6;
 }
+
 /* =================================
    FOOTER STYLES
    ================================= */
 
 footer {
-    background-color: #071629; /* The same dark color as the membership section */
-    padding: 60px 0 30px 0; /* Top, Right/Left, Bottom */
+    background-color: #071629;
+    padding: 60px 0 30px 0;
 }
 
 .footer-container {
-    max-width: 1000px; /* Aligns the footer with the rest of the content */
-    margin: 0 auto; /* Centers the container */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .footer-row {
-    display: flex; /* Puts the logo and social icons side-by-side */
-    justify-content: space-between; /* Pushes them to opposite ends */
-    align-items: center; /* Aligns them vertically in the middle */
-    margin-bottom: 40px; /* Space between this row and the copyright text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .social-icons a {
-    margin-left: 20px; /* Adds space between each social media icon */
+    margin-left: 20px;
 }
 
 .copyright-text {
     text-align: center;
-    color: #888; /* A light grey for the copyright text */
+    color: #888;
     font-size: 12px;
 }
